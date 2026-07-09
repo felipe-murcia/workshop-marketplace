@@ -1,0 +1,25 @@
+src/test/java/com/example/libreria/controller/CategoriaControllerTest.java
+  s_307846baa6f067::t_62910e98b55758 46,50
+  h_80cdc9e59d8920 1-45,47-49,51-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "e07c66198baa41b0586e0d5e8dd725bb73b2781b",
+  "prompts": {},
+  "humans": {
+    "h_80cdc9e59d8920": {
+      "author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_307846baa6f067": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3f94b88c-c54d-46b7-8468-d7dc47f3c7fd",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  }
+}
