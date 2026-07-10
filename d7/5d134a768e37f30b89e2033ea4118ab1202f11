@@ -1,0 +1,40 @@
+src/main/java/com/example/libreria/exception/GlobalExceptionHandler.java
+  s_d00d117cb5b73e::t_f255b43b7e1841 65-75
+src/main/java/com/example/libreria/service/impl/CategoriaServiceImpl.java
+  s_d00d117cb5b73e::t_2a7ee952fa1983 6
+  s_d00d117cb5b73e::t_c28f17f14208fd 40,42
+  h_80cdc9e59d8920 41
+src/main/java/com/example/libreria/exception/DuplicateResourceException.java
+  s_d00d117cb5b73e::t_fd8d806c596e37 1-8
+src/main/resources/application.properties
+  h_80cdc9e59d8920 2
+src/main/java/com/example/libreria/repository/CategoriaRepository.java
+  s_d00d117cb5b73e::t_72453bc4f5e7e6 9-10
+src/test/java/com/example/libreria/service/CategoriaServiceImplTest.java
+  h_80cdc9e59d8920 1-15,18,20-21,23-44,46,65-66,68,71-72,75-77
+  s_d00d117cb5b73e::t_5ed7c274a6f40a 70,73
+  s_d00d117cb5b73e::t_a4bb6f7a76a5a8 45,47-64
+  s_d00d117cb5b73e::t_9a01d0f25e0c73 67,69,74
+  s_d00d117cb5b73e::t_d67e5e4928d619 16-17,19,22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "d75d134a768e37f30b89e2033ea4118ab1202f11",
+  "prompts": {},
+  "humans": {
+    "h_80cdc9e59d8920": {
+      "author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_d00d117cb5b73e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c4aea71-184e-4c81-9759-3a098a77630a",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  }
+}
