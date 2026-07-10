@@ -3,6 +3,7 @@ package com.example.libreria.service.impl;
 import com.example.libreria.dto.CategoriaDTO;
 import com.example.libreria.model.Categoria;
 import com.example.libreria.repository.CategoriaRepository;
+import com.example.libreria.exception.DuplicateResourceException;
 import com.example.libreria.service.CategoriaService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,9 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     public CategoriaDTO save(CategoriaDTO categoriaDTO) {
+        if (categoriaRepository.existsByNombre(categoriaDTO.getNombre())) {
+            throw new DuplicateResourceException("Ya existe una categoría con el nombre: " + categoriaDTO.getNombre());
+        }
         Categoria categoria = toEntity(categoriaDTO);
         return toDTO(categoriaRepository.save(categoria));
     }
