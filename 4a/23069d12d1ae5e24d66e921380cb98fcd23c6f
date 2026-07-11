@@ -1,0 +1,16 @@
+src/test/java/com/example/libreria/controller/CategoriaControllerTest.java
+  h_80cdc9e59d8920 96-97
+src/test/java/com/example/libreria/service/CategoriaServiceImplTest.java
+  h_80cdc9e59d8920 76-81,83-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "4a23069d12d1ae5e24d66e921380cb98fcd23c6f",
+  "prompts": {},
+  "humans": {
+    "h_80cdc9e59d8920": {
+      "author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  }
+}
