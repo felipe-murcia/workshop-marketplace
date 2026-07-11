@@ -73,5 +73,17 @@ public class CategoriaServiceImplTest {
         Mockito.verify(categoriaRepository, Mockito.never()).save(Mockito.any(Categoria.class));
     }
 
+    @Test
+    void eliminarCategoria() {
+        Mockito.when(categoriaRepository.existsById(1L)).thenReturn(true);
+        categoriaService.deleteById(1L);
+        Mockito.verify(categoriaRepository).deleteById(1L);
+    }
 
+    @Test
+    void eliminarCategoria_noEncontrado() {
+        Mockito.when(categoriaRepository.existsById(99L)).thenReturn(false);
+        assertThrows(EntityNotFoundException.class, () -> categoriaService.deleteById(99L));
+        Mockito.verify(categoriaRepository, Mockito.never()).deleteById(1L);
+    }
 }
