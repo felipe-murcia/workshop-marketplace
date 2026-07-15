@@ -1,0 +1,20 @@
+pom.xml
+  s_4fa94674695136::t_2ad229d4818333 40-44
+  s_4fa94674695136::t_be3461eb8b099c 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "9bada128d66c1ddbeb5acbf993d915bb9fbf3596",
+  "prompts": {},
+  "sessions": {
+    "s_4fa94674695136": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62953752-e6ef-4353-aa7d-40dab0e6a9bc",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  }
+}
