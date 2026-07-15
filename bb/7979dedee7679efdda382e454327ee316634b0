@@ -1,0 +1,35 @@
+src/main/java/com/example/libreria/service/CategoriaService.java
+  s_4fa94674695136::t_9bf5edda2a0d8a 1-34
+src/main/java/com/example/libreria/model/Libro.java
+  s_4fa94674695136::t_f12285f0217b6b 1-35
+src/main/java/com/example/libreria/repository/CategoriaRepository.java
+  s_4fa94674695136::t_2a66c8fa719fbf 1-9
+src/main/java/com/example/libreria/model/Categoria.java
+  s_4fa94674695136::t_6727a593ffcc4e 1-20
+src/main/java/com/example/libreria/repository/LibroRepository.java
+  s_4fa94674695136::t_a9ebfc64f2e91c 1-9
+src/main/java/com/example/libreria/controller/CategoriaController.java
+  s_4fa94674695136::t_679925f9a53956 1-52
+src/main/java/com/example/libreria/controller/LibroController.java
+  s_4fa94674695136::t_2ef8bae1363287 1-52
+src/main/java/com/example/libreria/service/LibroService.java
+  s_4fa94674695136::t_2b61d21118a46c 1-34
+src/main/resources/application.properties
+  s_4fa94674695136::t_4cd6a95ade3c47 3-6,8,11,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "bb7979dedee7679efdda382e454327ee316634b0",
+  "prompts": {},
+  "sessions": {
+    "s_4fa94674695136": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62953752-e6ef-4353-aa7d-40dab0e6a9bc",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  }
+}
