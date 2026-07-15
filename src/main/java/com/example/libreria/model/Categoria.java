@@ -1,6 +1,12 @@
 package com.example.libreria.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
 
 @Entity
 @Table(name = "categorias")
@@ -11,6 +17,14 @@ public class Categoria {
     private Long id;
 
     private String nombre;
+
+    public Categoria() {
+    }
+
+    public Categoria(Long id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
