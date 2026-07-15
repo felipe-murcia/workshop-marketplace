@@ -1,0 +1,29 @@
+pom.xml
+  s_4fa94674695136::t_8841ae1eb16e27 1-44
+src/main/resources/application.properties
+  s_4fa94674695136::t_1f383733f5d603 1
+.gitignore
+  s_4fa94674695136::t_f6a76cb73a76d6 1-33
+.mvn/wrapper/maven-wrapper.properties
+  s_4fa94674695136::t_447a9df418bf83 1-2
+src/main/java/com/example/libreria/LibreriaApplication.java
+  s_4fa94674695136::t_b8ad751998b664 1-13
+src/test/java/com/example/libreria/LibreriaApplicationTests.java
+  s_4fa94674695136::t_20ed9db2ac87ec 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "079816a1b764cad5bf9179ba30098d775e4bb241",
+  "prompts": {},
+  "sessions": {
+    "s_4fa94674695136": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "62953752-e6ef-4353-aa7d-40dab0e6a9bc",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "felipe-murcia <felipemurcia248@gmail.com>"
+    }
+  }
+}
