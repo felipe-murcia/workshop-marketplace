@@ -1,29 +1,19 @@
-package com.example.libreria.model;
-
-import jakarta.persistence.*;
+package com.example.libreria.dto;
 
 import java.math.BigDecimal;
 
-@Entity
-@Table(name = "libros")
-public class Libro {
+public class LibroResponse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
     private String autor;
     private BigDecimal precio;
+    private CategoriaResponse categoria;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "categoria_id")
-    private Categoria categoria;
-
-    public Libro() {
+    public LibroResponse() {
     }
 
-    public Libro(Long id, String titulo, String autor, BigDecimal precio, Categoria categoria) {
+    public LibroResponse(Long id, String titulo, String autor, BigDecimal precio, CategoriaResponse categoria) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
@@ -43,6 +33,6 @@ public class Libro {
     public BigDecimal getPrecio() { return precio; }
     public void setPrecio(BigDecimal precio) { this.precio = precio; }
 
-    public Categoria getCategoria() { return categoria; }
-    public void setCategoria(Categoria categoria) { this.categoria = categoria; }
+    public CategoriaResponse getCategoria() { return categoria; }
+    public void setCategoria(CategoriaResponse categoria) { this.categoria = categoria; }
 }

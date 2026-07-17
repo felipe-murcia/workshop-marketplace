@@ -1,9 +1,19 @@
 package com.example.libreria.controller;
 
-import com.example.libreria.model.Libro;
+import com.example.libreria.dto.LibroRequest;
+import com.example.libreria.dto.LibroResponse;
 import com.example.libreria.service.LibroService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -18,30 +28,26 @@ public class LibroController {
     }
 
     @GetMapping
-    public List<Libro> findAll() {
-        return service.findAll();
+    public ResponseEntity<List<LibroResponse>> findAll() {
+        return ResponseEntity.ok(service.findAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Libro> findById(@PathVariable Long id) {
+    public ResponseEntity<LibroResponse> findById(@PathVariable Long id) {
         return service.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public Libro save(@RequestBody Libro libro) {
-        return service.save(libro);
+    public ResponseEntity<LibroResponse> save(@Valid @RequestBody LibroRequest request) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(request));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Libro> update(@PathVariable Long id, @RequestBody Libro libro) {
-        return service.findById(id)
-                .map(existing -> {
-                    libro.setId(id);
-                    return ResponseEntity.ok(service.save(libro));
-                })
-                .orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<LibroResponse> update(@PathVariable Long id,
+                                                @Valid @RequestBody LibroRequest request) {
+        return ResponseEntity.ok(service.update(id, request));
     }
 
     @DeleteMapping("/{id}")

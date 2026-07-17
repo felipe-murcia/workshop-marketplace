@@ -1,9 +1,19 @@
 package com.example.libreria.controller;
 
-import com.example.libreria.model.Categoria;
+import com.example.libreria.dto.CategoriaRequest;
+import com.example.libreria.dto.CategoriaResponse;
 import com.example.libreria.service.CategoriaService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -18,30 +28,26 @@ public class CategoriaController {
     }
 
     @GetMapping
-    public List<Categoria> findAll() {
-        return service.findAll();
+    public ResponseEntity<List<CategoriaResponse>> findAll() {
+        return ResponseEntity.ok(service.findAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Categoria> findById(@PathVariable Long id) {
+    public ResponseEntity<CategoriaResponse> findById(@PathVariable Long id) {
         return service.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public Categoria save(@RequestBody Categoria categoria) {
-        return service.save(categoria);
+    public ResponseEntity<CategoriaResponse> save(@Valid @RequestBody CategoriaRequest request) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(request));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Categoria> update(@PathVariable Long id, @RequestBody Categoria categoria) {
-        return service.findById(id)
-                .map(existing -> {
-                    categoria.setId(id);
-                    return ResponseEntity.ok(service.save(categoria));
-                })
-                .orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<CategoriaResponse> update(@PathVariable Long id,
+                                                    @Valid @RequestBody CategoriaRequest request) {
+        return ResponseEntity.ok(service.update(id, request.getNombre()));
     }
 
     @DeleteMapping("/{id}")
